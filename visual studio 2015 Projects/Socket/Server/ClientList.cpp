@@ -17,6 +17,7 @@ void ClientList::Add(CSocket* socket)
 	if(socket!=NULL)
 	{
 		_list.push_back(socket);
+		cout << "新上线一个用户，在线人数：" << _list.size() << endl;
 	}
 	LeaveCriticalSection(&g_cs);//退出关键段  
 }
@@ -40,6 +41,8 @@ void ClientList::Remove(CSocket* socket)
 	{ 
 		delete *iter; 
 		_list.erase(iter);
+
+		cout << "一个用户下线，在线人数：" << _list.size() << endl;
 	}
 	LeaveCriticalSection(&g_cs);//退出关键段  
 }

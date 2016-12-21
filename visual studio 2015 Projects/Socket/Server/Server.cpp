@@ -21,7 +21,7 @@ void recv(PVOID pt)
 		{  
 			ClientList* list=ClientList::GetInstance(); 
 			list->Remove(csocket);
-			cout<<"一个用户下线，在线人数："<<list->Count()<<endl;
+			
 			//_endthread(); //用户下线，终止接收数据线程
 		}
 	} 
@@ -62,7 +62,7 @@ int main(int argc, char* argv[])
 		CSocket* csocket=server.Accept();
 		
 		list->Add(csocket);
-		cout<<"新上线一个用户，在线人数："<<list->Count()<<endl;
+		
 		_beginthread(recv,0,csocket);//启动一个接收数据的线程
 	 }
  
