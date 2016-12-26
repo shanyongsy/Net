@@ -18,9 +18,9 @@ namespace Client
             Sodao.FastSocket.SocketBase.Log.Trace.EnableConsole();
             var client = new SocketClient<CommandLineMessage>(new CommandLineProtocol(), 1024, 1024, 3000, 3000);
             //建立50个socket连接
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 1; i++)
             {
-                client.TryRegisterEndPoint(i.ToString(), new[] { new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1986) },
+                client.TryRegisterEndPoint(i.ToString(), new[] { new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2017) },
                     connection =>
                     {
                         var source = new TaskCompletionSource<bool>();

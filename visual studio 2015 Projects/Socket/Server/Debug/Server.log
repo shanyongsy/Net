@@ -1,1 +1,6 @@
-﻿
+﻿  Server.cpp
+ClientList.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  Server.vcxproj -> D:\GitHub\Net\visual studio 2015 Projects\Socket\Server\Debug\ServerD.exe
+  Server.vcxproj -> D:\GitHub\Net\visual studio 2015 Projects\Socket\Server\Debug\ServerD.pdb (Full PDB)
+  D:\GitHub\Net\visual studio 2015 Projects\Socket\Server\Debug\ServerD.exe
+  复制了 1 个文件
